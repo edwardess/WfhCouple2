@@ -96,7 +96,6 @@ const CourseImage = ({ course }: { course: courseProps }) => {
 
 
 
-
 const page = () => {
   const { userId } = auth();
 
@@ -104,17 +103,20 @@ const page = () => {
     <div className="flex flex-col gap-6">
       <section className="flex flex-col items-center justify-center h-full container gap-6 pt-10 md:pt-24 lg:pt-36">
         {/* Logo Image */}
-        <img 
-          src="https://s3.amazonaws.com/mavstorage/67056c85dbf30_WFHCOUPLELOGO2.png" // Your logo image URL
-          alt="Logo" 
-          className="mb-4 h-24 w-24 rounded-full object-cover" // Adjust size and make it circular
-        />
+        <div className="relative w-24 h-24 mb-4 overflow-hidden rounded-full">
+          <img 
+            src="https://s3.amazonaws.com/mavstorage/67056c85dbf30_WFHCOUPLELOGO2.png" // Your logo image URL
+            alt="Logo" 
+            className="object-cover w-full h-full rounded-full" // Ensures the image is circular
+          />
+        </div>
+        
         <h1 className="font-bold text-2xl max-w-none sm:text-3xl sm:max-w-3xl md:text-4xl md:max-w-4xl lg:text-6xl lg:max-w-6xl text-center">
-          BREW YOUR FUTURE, <br/> ONE {" "}
+          BREW YOUR FUTURE, <br /> ONE {" "}
           <span className="text-primary">QUALITY SIP</span> AT A TIME
         </h1>
         <p className="text-muted-foreground text-sm md:text-base max-w-3xl text-center font-light">
-          We understand that learning can feel overwhelming. Instead of trying to absorb everything at once, take small, quality sips of knowledge that build your skills gradually. Our platform is designed to guide you through each step, making your learning journey not just easier but also more enjoyable. Together, let's brew your skills and craft a future where knowledge unfolds naturally, at your own pace.
+          We understand that learning can feel overwhelming. Instead of trying to absorb everything at once, take small, quality sips of knowledge that build your skills gradually. Our platform is designed to guide you through each step, making your learning journey not just easier but also more enjoyable. Together, let&apos;s brew your skills and craft a future where knowledge unfolds naturally, at your own pace.
         </p>
         <div className="flex items-center justify-center gap-3">
           {userId ? (

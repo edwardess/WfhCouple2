@@ -20,8 +20,14 @@ const nextConfig = {
         port: '',
         pathname: '/*',
       },
-    ]
-  }
+      {
+        protocol: 'https',
+        hostname: 's3.amazonaws.com', // Ensure this line is present
+        port: '',
+        pathname: '/*',
+      },
+    ],
+  },
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;
