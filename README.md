@@ -1,10 +1,6 @@
-# Nahhas LMS Website
+# WFHCOUPLE
 
 This is a Learning Management System (LMS) website built with Next.js. The purpose of this project is to provide a comprehensive platform for online education, tailored for the Syrian community.
-
-## Demo Video
-
-Check out the demo video for this project on YouTube: [Demo Video](https://youtu.be/0g7wvi6tehQ)
 
 ---
 
