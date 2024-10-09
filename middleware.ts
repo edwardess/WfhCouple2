@@ -2,19 +2,26 @@ import { authMiddleware } from "@clerk/nextjs";
 import { NextResponse } from 'next/server';
 
 export default authMiddleware({
-  // Temporarily allow all routes by adding them to publicRoutes
-  publicRoutes: ['/', '/dashboard', '/search', '/leaderboard', '/shop', '/settings', '/api/webhook'], 
+  publicRoutes: ["/", "/api/webhook"],
 
   afterAuth: (auth, req) => {
-    console.log("Auth Status:", auth);  
-    console.log("User ID:", auth.userId);  
-    console.log("Session ID:", auth.sessionId);  
+    const protectedRoutes = ['/dashboard', '/search', '/leaderboard', '/shop', '/settings'];
 
-    // Since all routes are public now, no redirect for unauthenticated users.
-    console.log("Access allowed for route:", req.nextUrl.pathname);
+    console.log("Auth Status:", auth);  // Debugging the auth object returned from Clerk
+    console.log("User ID:", auth.userId);  // Check if userId is correctly detected
+    console.log("Session ID:", auth.sessionId);  // Check if a session ID is present
+    console.log("Route being accessed:", req.nextUrl.pathname);  // Log the route being accessed
+
+    if (!auth.userId && protectedRoutes.includes(req.nextUrl.pathname)) {
+      console.log("No user authenticated, redirecting to sign-in.");
+      const loginUrl = new URL('/sign-in', req.url);
+      return NextResponse.redirect(loginUrl);
+    }
+
+    console.log("User authenticated, access allowed.");
   }
 });
 
 export const config = {
-  matcher: ['/((?!.+\\.[\\w]+$|_next).*)', '/', '/(api|trpc)(.*)'],  
+  matcher: ['/((?!.+\\.[\\w]+$|_next).*)', '/', '/(api|trpc)(.*)'],
 };
