@@ -12,11 +12,9 @@ const Dashboard = async () => {
   if (!userId) {
     return redirect("/");
   }
-  const user = await clerkClient.users.getUser(userId);
 
-  const { completedCourses, coursesInProgress } = await getDashboardCourses(
-    userId
-  );
+  const user = await clerkClient.users.getUser(userId);
+  const { completedCourses, coursesInProgress } = await getDashboardCourses(userId);
   const xp = user.publicMetadata.xp || 0;
 
   return (
@@ -64,5 +62,8 @@ const Dashboard = async () => {
     </div>
   );
 };
+
+// Adding the revalidation logic here for ISR
+export const revalidate = 60; // Revalidate the page every 60 seconds
 
 export default Dashboard;
