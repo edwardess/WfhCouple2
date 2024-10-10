@@ -5,7 +5,7 @@
         "destination": "https://portfolio-wfhcouple.vercel.app/portfolio/:path*"
       },
       {
-        "source": "/:path*",
+        "source": "/(?!portfolio).*",
         "destination": "https://wfhcouple.com/:path*"
       }
     ]
