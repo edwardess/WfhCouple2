@@ -1,0 +1,13 @@
+{
+    "rewrites": [
+      {
+        "source": "/portfolio/:path*",
+        "destination": "https://portfolio-wfhcouple.vercel.app/portfolio/:path*"
+      },
+      {
+        "source": "/:path*",
+        "destination": "https://wfhcouple.com/:path*"
+      }
+    ]
+  }
+  

@@ -28,14 +28,6 @@ const nextConfig = {
       },
     ],
   },
-  async rewrites() {
-    return [
-      {
-        source: "/portfolio/:path*",
-        destination: "https://portfolio-wfhcouple.vercel.app/portfolio/:path*", // Update to your portfolio URL
-      },
-    ];
-  },
-};
+}
 
 module.exports = nextConfig;
