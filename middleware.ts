@@ -1,27 +1,14 @@
-import { authMiddleware } from "@clerk/nextjs";
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
-export default authMiddleware({
-  publicRoutes: ["/", "/api/webhook", "/portfolio"],  // Add /portfolio to public routes
+// Middleware function to allow all routes without authentication
+export default function middleware(req: NextRequest) {
+  console.log("Middleware activated for route:", req.nextUrl.pathname); // Log the accessed route
 
-  afterAuth: (auth, req) => {
-    const protectedRoutes = ['/dashboard', '/search', '/leaderboard', '/shop', '/settings'];
+  // Allow all requests to proceed without any authentication checks
+  return NextResponse.next();
+}
 
-    console.log("Auth Status:", auth);
-    console.log("User ID:", auth.userId);
-    console.log("Session ID:", auth.sessionId);
-    console.log("Route being accessed:", req.nextUrl.pathname);
-
-    if (!auth.userId && protectedRoutes.includes(req.nextUrl.pathname)) {
-      console.log("No user authenticated, redirecting to sign-in.");
-      const loginUrl = new URL('/sign-in', req.url);
-      return NextResponse.redirect(loginUrl);
-    }
-
-    console.log("User authenticated, access allowed.");
-  }
-});
-
+// Matcher configuration
 export const config = {
-  matcher: ['/((?!.+\\.[\\w]+$|_next).*)', '/', '/(api|trpc)(.*)'],
+  matcher: ['/((?!.+\\.[\\w]+$|_next).*)'], // Match all routes except for static files and _next
 };
