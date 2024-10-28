@@ -9,7 +9,7 @@
   "rewrites": [
     {
       "source": "/consultation",
-      "destination": "/api/consultation"
+      "destination": "/app/api/consultation"
     }
   ]
 }
