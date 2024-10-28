@@ -5,11 +5,16 @@
         "destination": "https://portfolio-wfhcouple.vercel.app",
         "permanent": true
       },
-              {
-        "source": "/consultation",
-        "destination": "https://officialwfhcouple.systeme.io/consultation",
-        "permanent": true
-      }
-    ]
-  }
+    ],
+    
+  },
+{
+  "rewrites": [
+    {
+      "source": "/consultation",
+      "destination": "/api/consultation"
+    }
+  ]
+}
+
   
