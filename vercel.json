@@ -1,14 +1,11 @@
 {
-    "redirects": [
-      {
-        "source": "/portfolio",
-        "destination": "https://portfolio-wfhcouple.vercel.app",
-        "permanent": true
-      },
-    ],
-    
-  },
-{
+  "redirects": [
+    {
+      "source": "/portfolio",
+      "destination": "https://portfolio-wfhcouple.vercel.app",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/consultation",
@@ -16,5 +13,3 @@
     }
   ]
 }
-
-  
