@@ -9,7 +9,7 @@
   "rewrites": [
     {
       "source": "/consultation",
-      "destination": "/app/api/consultation"
+     "destination": "https://officialwfhcouple.systeme.io/consultation"
     }
   ]
 }
