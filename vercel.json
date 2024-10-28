@@ -1,9 +1,8 @@
 {
-  "redirects": [
+  "rewrites": [
     {
       "source": "/portfolio",
-      "destination": "https://portfolio-wfhcouple.vercel.app",
-      "permanent": true
+      "destination": "https://portfolio-wfhcouple.vercel.app"
     }
   ],
   "rewrites": [
