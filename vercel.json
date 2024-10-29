@@ -6,10 +6,11 @@
        "permanent": true
     }
   ],
-  "rewrites": [
+  "redirects": [
     {
       "source": "/consultation",
-     "destination": "https://officialwfhcouple.systeme.io/consultation"
+     "destination": "https://officialwfhcouple.systeme.io/consultation",
+      "permanent": true
     }
   ]
 }
