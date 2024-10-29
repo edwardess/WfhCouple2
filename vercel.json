@@ -3,13 +3,11 @@
     {
       "source": "/portfolio",
       "destination": "https://portfolio-wfhcouple.vercel.app",
-       "permanent": true
-    }
-  ],
-  "redirects": [
+      "permanent": true
+    },
     {
       "source": "/consultation",
-     "destination": "https://officialwfhcouple.systeme.io/consultation",
+      "destination": "https://officialwfhcouple.systeme.io/consultation",
       "permanent": true
     }
   ]
