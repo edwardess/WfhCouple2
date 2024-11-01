@@ -1,5 +1,10 @@
 {
   "redirects": [
+        {
+      "source": "/",
+      "destination": "https://officialwfhcouple.systeme.io/services",
+      "permanent": true
+    },
     {
       "source": "/portfolio",
       "destination": "https://portfolio-wfhcouple.vercel.app",
