@@ -19,6 +19,11 @@
       "source": "/packages",
       "destination": "https://officialwfhcouple.systeme.io/packages",
       "permanent": true
+    },
+            {
+      "source": "/erica",
+      "destination": "https://systeme.io/?sa=sa020658149267a2fa04cf9229fbf1eb842bc1c3bd",
+      "permanent": true
     }
   ]
 }
