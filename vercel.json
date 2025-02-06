@@ -34,6 +34,11 @@
       "source": "/learninghub",
       "destination": "https://www.canva.com/design/DAGeVh4sKnU/1pJr492sp788S-TQUw2vvw/edit",
       "permanent": true
+    },
+            {
+      "source": "/logo",
+      "destination": "https://drive.google.com/drive/u/1/folders/1eOWG2g846-ZaS8DnqW6Z0Cj_eNBM_ALn",
+      "permanent": true
     }
   ]
 }
