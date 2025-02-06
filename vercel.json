@@ -26,8 +26,13 @@
       "permanent": true
     },
     {
-      "source": "/erica",
-      "destination": "https://systeme.io/?sa=sa020658149267a2fa04cf9229fbf1eb842bc1c3bd",
+      "source": "/brandkit",
+      "destination": "https://www.canva.com/design/DAGeV0jYxTc/p-ZoyWsoMj00OAMy40G8ww/edit?utm_content=DAGeV0jYxTc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+      "permanent": true
+    },
+        {
+      "source": "/learninghub",
+      "destination": "https://www.canva.com/design/DAGeVh4sKnU/1pJr492sp788S-TQUw2vvw/edit",
       "permanent": true
     }
   ]
