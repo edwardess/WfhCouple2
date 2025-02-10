@@ -44,6 +44,11 @@
       "source": "/gdrive",
       "destination": "https://drive.google.com/drive/folders/1R9cDiHrfbeaCGMoTiVaWjofay9E-9DWP?usp=sharing",
       "permanent": true
+    },
+            {
+      "source": "/sub-branding",
+      "destination": "https://www.canva.com/design/DAGenaShxS0/zn4WFebxz1JrlnV7k5iNug/edit",
+      "permanent": true
     }
   ]
 }
